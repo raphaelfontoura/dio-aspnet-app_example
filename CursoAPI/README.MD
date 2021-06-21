@@ -27,6 +27,8 @@ $ dotnet aspnet-codegenerator controller -name ProductController -outDir Control
 
 >https://wakeupandcode.com/debugging-multiple-net-core-projects-in-vs-code/
 
+>https://docs.microsoft.com/pt-br/ef/core/querying/related-data/eager
+
 <br>
 
 ## Executando:
