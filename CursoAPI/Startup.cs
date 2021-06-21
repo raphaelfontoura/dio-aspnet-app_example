@@ -12,6 +12,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
+using CursoMVC.Models;
+
 namespace CursoAPI
 {
     public class Startup
@@ -30,8 +32,9 @@ namespace CursoAPI
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CursoAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Curso API", Version = "v1" });
             });
+            services.AddDbContext<Context>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,7 +44,7 @@ namespace CursoAPI
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CursoAPI v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Curso API v1"));
             }
 
             app.UseHttpsRedirection();

@@ -2,6 +2,27 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": ".NET Core Launch (api)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/CursoAPI/bin/Debug/netcoreapp3.1/CursoAPI.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/CursoAPI",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+
+        {
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes
             // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
@@ -30,6 +51,15 @@
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Both Console & Web API",
+            "configurations": [
+                ".NET Core Launch (web)",
+                ".NET Core Launch (api)"
+            ]
         }
     ]
 }
