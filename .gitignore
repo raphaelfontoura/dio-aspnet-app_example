@@ -1,4 +1,4 @@
 sql*.log
 /docker/data
 /docker/log
-
+.vscode

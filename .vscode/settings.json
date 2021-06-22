@@ -1,3 +1,5 @@
 {
-    "sqltools.connections": []
+    "sqltools.connections": [],
+    "appService.defaultWebAppToDeploy": "/subscriptions/eda51982-28e4-4886-af8a-75dab440a2a2/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/CursoMVC202107211429",
+    "appService.deploySubpath": "CursoMVC"
 }
